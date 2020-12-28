@@ -89,7 +89,7 @@ function updateOrder($data)
 	if($data->CmdType == '3')
 	{	
 		// Счет оплачен
-		if($data->Status == '3')
+		if($data->Status == '3' || '6')
 		{		
 			// получение заказа по номеру лицевого счета
 			$orderDataArray = CSaleOrder::GetByID(intval($data->AccountNo));
